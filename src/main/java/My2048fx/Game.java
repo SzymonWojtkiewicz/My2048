@@ -74,11 +74,12 @@ public class Game {
     }
 
     public boolean move(String direction){
+        boolean somethingMoved = false;
         int edgeLine;
         int numericDirectionX;
         int numericDirectionY;
         int coordinateParallelToMovement;
-        int corrdinatePerpendicularToMovment;
+        int coordinatePerpendicularToMovement;
         int x;
         int y;
 
@@ -93,17 +94,65 @@ public class Game {
                 numericDirectionX = 0;
                 numericDirectionY = -1;
 
+                for(int k = 1; k < gameArray.length; k++){
+                    for(int j = 0; j < gameArray.length - k; j++){
+                        for(int i = 0; i < gameArray.length; i++){
+                            if(gameArray[j + 1][i] == 0)
+                                continue;
+                            if(gameArray[j + 1][i] == gameArray[j][i]){
+                                somethingMoved = true;
+                                gameArray[j][i] = gameArray[j][i] * 2;
+                                gameArray[j + 1][i] = 0;
+                                continue;
+                            }
+                            if(gameArray[j][i] == 0 && gameArray[j + 1][i] != 0){
+                                somethingMoved = true;
+                                gameArray[j][i] = gameArray[j + 1][i];
+                                gameArray[j + 1][i] = 0;
+                                continue;
+                            }
+                        }
+                    }
+                }
                 break;
             case "down":
+                for(int k = gameArray.length - 1; k > 0; k--){
+                    for(int j = gameArray.length - 1; j > k - 1; j--){
+                        for(int i = 0; i < gameArray.length; i++){
+                            if(gameArray[j + 1][i] == 0)
+                                continue;
+                            if(gameArray[j + 1][i] == gameArray[j][i]){
+                                somethingMoved = true;
+                                gameArray[j][i] = gameArray[j][i] * 2;
+                                gameArray[j + 1][i] = 0;
+                                continue;
+                            }
+                            if(gameArray[j][i] == 0 && gameArray[j + 1][i] != 0){
+                                somethingMoved = true;
+                                gameArray[j][i] = gameArray[j + 1][i];
+                                gameArray[j + 1][i] = 0;
+                                continue;
+                            }
+                        }
+                    }
+                }
                 break;
             case "left":
                 break;
             case "right":
                 break;
         }
+        for(int j = 0; j < gameArray.length; j++){
+            for(int i = 0; i < gameArray.length; i++){
 
+            }
+        }
+        for(int j = 0; j < gameArray.length - 1; j++){
 
+        }
+        for(int j = 0; j < gameArray.length - 2; j++){
 
+        }
         return true;
     }
 }
