@@ -12,44 +12,47 @@ public class Game {
     }
 
     public boolean addNumber() {
-        int numbersOfZeros = 0;
-        int[][] var2 = this.gameArray;
-        int newValue = var2.length;
+        int quantityOfZeros = 0;
+        //int[][] var2 = this.gameArray;
+        //int newValue = this.gameArray.length;
 
-        int currentZero;
-        int var7;
-        int var8;
-        for(currentZero = 0; currentZero < newValue; ++currentZero) {
-            int[] y = var2[currentZero];
-            int[] var6 = y;
-            var7 = y.length;
+        //int currentZeroIterator;
+        //int var7;
+        //int var8;
+        for(int currentZeroIteratorRow = 0; currentZeroIteratorRow < this.gameArray.length; ++currentZeroIteratorRow) {
+            //int[] y = gameArray[currentZero];
+            int[] y = gameArray[currentZeroIteratorRow];
+            //var7 = y.length;
 
-            for(var8 = 0; var8 < var7; ++var8) {
-                int x = var6[var8];
+
+            for(int currentZeroIteratorColumn = 0; currentZeroIteratorColumn < y.length; ++currentZeroIteratorColumn) {
+                int x = y[currentZeroIteratorColumn];
                 if (x == 0) {
-                    ++numbersOfZeros;
+                    ++quantityOfZeros;
                 }
             }
         }
 
-        if (numbersOfZeros == 0) {
+        if (quantityOfZeros == 0) {
             return false;
+
+
         } else {
-            int whichZeroToChange = (new Random()).nextInt(numbersOfZeros - 1 + 1) + 1;
-            newValue = (new Random()).nextInt(2) + 1;
+            int whichZeroToChange = (new Random()).nextInt(quantityOfZeros - 1 + 1) + 1;
+            int newValue = (new Random()).nextInt(2) + 1;
             newValue *= 2;
-            currentZero = 0;
             boolean breakAll = false;
-            int[][] var16 = this.gameArray;
-            var7 = var16.length;
+            int currentZero = 0;
 
-            for(var8 = 0; var8 < var7; ++var8) {
-                int[] y = var16[var8];
-                int[] var10 = y;
-                int var11 = y.length;
 
-                for(int var12 = 0; var12 < var11; ++var12) {
-                    int x = var10[var12];
+            for(int currentZeroIteratorRow = 0; currentZeroIteratorRow < this.gameArray.length; ++currentZeroIteratorRow) {
+                //int[] y = var16[var8];
+                //int[] var10 = y;
+                //int var11 = y.length;
+                int[] y = gameArray[currentZeroIteratorRow];
+
+                for(int currentZeroIteratorColumn = 0; currentZeroIteratorColumn < y.length; ++currentZeroIteratorColumn) {
+                    int x = y[currentZeroIteratorColumn];
                     if (x == 0) {
                         ++currentZero;
                     }
@@ -68,5 +71,39 @@ public class Game {
 
             return true;
         }
+    }
+
+    public boolean move(String direction){
+        int edgeLine;
+        int numericDirectionX;
+        int numericDirectionY;
+        int coordinateParallelToMovement;
+        int corrdinatePerpendicularToMovment;
+        int x;
+        int y;
+
+        /*  direction
+                 up
+            left    right
+                down
+         */
+        switch (direction){
+            case "up":
+                edgeLine = 0;
+                numericDirectionX = 0;
+                numericDirectionY = -1;
+
+                break;
+            case "down":
+                break;
+            case "left":
+                break;
+            case "right":
+                break;
+        }
+
+
+
+        return true;
     }
 }
