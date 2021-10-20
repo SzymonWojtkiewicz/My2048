@@ -10,8 +10,14 @@ public class Main2048 extends Application {
         newGame.addNumber();
         newGame.addNumber();
         newGame.addNumber();
-        newGame.move("up");
         newGame.addNumber();
+        newGame.addNumber();
+        newGame.addNumber();
+        newGame.addNumber();
+        newGame.addNumber();
+        newGame.move("up");
+        newGame.move("down");
+
         launch();
     }
     @Override

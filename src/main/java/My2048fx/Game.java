@@ -13,17 +13,9 @@ public class Game {
 
     public boolean addNumber() {
         int quantityOfZeros = 0;
-        //int[][] var2 = this.gameArray;
-        //int newValue = this.gameArray.length;
 
-        //int currentZeroIterator;
-        //int var7;
-        //int var8;
         for(int currentZeroIteratorRow = 0; currentZeroIteratorRow < this.gameArray.length; ++currentZeroIteratorRow) {
-            //int[] y = gameArray[currentZero];
             int[] y = gameArray[currentZeroIteratorRow];
-            //var7 = y.length;
-
 
             for(int currentZeroIteratorColumn = 0; currentZeroIteratorColumn < y.length; ++currentZeroIteratorColumn) {
                 int x = y[currentZeroIteratorColumn];
@@ -46,19 +38,18 @@ public class Game {
 
 
             for(int currentZeroIteratorRow = 0; currentZeroIteratorRow < this.gameArray.length; ++currentZeroIteratorRow) {
-                //int[] y = var16[var8];
-                //int[] var10 = y;
-                //int var11 = y.length;
+
                 int[] y = gameArray[currentZeroIteratorRow];
 
                 for(int currentZeroIteratorColumn = 0; currentZeroIteratorColumn < y.length; ++currentZeroIteratorColumn) {
                     int x = y[currentZeroIteratorColumn];
                     if (x == 0) {
                         ++currentZero;
+
                     }
 
                     if (currentZero == whichZeroToChange) {
-                        y[x] = newValue;
+                        y[currentZeroIteratorColumn] = newValue;
                         breakAll = true;
                         break;
                     }
@@ -116,21 +107,22 @@ public class Game {
                 }
                 break;
             case "down":
-                for(int k = gameArray.length - 1; k > 0; k--){
-                    for(int j = gameArray.length - 1; j > k - 1; j--){
+                //for(int k = gameArray.length - 1; k > 0; k--)
+                for(int k =  0; k < gameArray.length - 1; k++){
+                    for(int j = gameArray.length - 1; j > k ; j--){
                         for(int i = 0; i < gameArray.length; i++){
-                            if(gameArray[j + 1][i] == 0)
+                            if(gameArray[j - 1][i] == 0)
                                 continue;
-                            if(gameArray[j + 1][i] == gameArray[j][i]){
+                            if(gameArray[j - 1][i] == gameArray[j][i]){
                                 somethingMoved = true;
                                 gameArray[j][i] = gameArray[j][i] * 2;
-                                gameArray[j + 1][i] = 0;
+                                gameArray[j - 1][i] = 0;
                                 continue;
                             }
-                            if(gameArray[j][i] == 0 && gameArray[j + 1][i] != 0){
+                            if(gameArray[j][i] == 0 && gameArray[j - 1][i] != 0){
                                 somethingMoved = true;
-                                gameArray[j][i] = gameArray[j + 1][i];
-                                gameArray[j + 1][i] = 0;
+                                gameArray[j][i] = gameArray[j - 1][i];
+                                gameArray[j - 1][i] = 0;
                                 continue;
                             }
                         }
@@ -138,6 +130,7 @@ public class Game {
                 }
                 break;
             case "left":
+
                 break;
             case "right":
                 break;
