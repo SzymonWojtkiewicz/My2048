@@ -10,7 +10,6 @@ public class Game {
 
     public Game() {
     }
-
     public boolean addNumber() {
         int quantityOfZeros = 0;
 
@@ -63,17 +62,16 @@ public class Game {
             return true;
         }
     }
-
     public boolean move(String direction){
         boolean somethingMoved = false;
-        int edgeLine;
+        /* int edgeLine;
         int numericDirectionX;
         int numericDirectionY;
         int coordinateParallelToMovement;
         int coordinatePerpendicularToMovement;
         int x;
         int y;
-
+        */
         /*  direction
                  up
             left    right
@@ -81,10 +79,6 @@ public class Game {
          */
         switch (direction){
             case "up":
-                edgeLine = 0;
-                numericDirectionX = 0;
-                numericDirectionY = -1;
-
                 for(int k = 1; k < gameArray.length; k++){
                     for(int j = 0; j < gameArray.length - k; j++){
                         for(int i = 0; i < gameArray.length; i++){
@@ -175,17 +169,10 @@ public class Game {
                 }
                 break;
         }
-        for(int j = 0; j < gameArray.length; j++){
-            for(int i = 0; i < gameArray.length; i++){
-
-            }
-        }
-        for(int j = 0; j < gameArray.length - 1; j++){
-
-        }
-        for(int j = 0; j < gameArray.length - 2; j++){
-
-        }
-        return true;
+        if(somethingMoved)
+            return true;
+        else
+            return false;
     }
+
 }
