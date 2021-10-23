@@ -17,6 +17,7 @@ public class Main2048 extends Application {
         newGame.addNumber();
         newGame.move("up");
         newGame.move("down");
+        newGame.move("left");
 
         launch();
     }

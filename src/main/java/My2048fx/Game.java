@@ -130,9 +130,30 @@ public class Game {
                 }
                 break;
             case "left":
-
+                //int i = 0; i < gameArray.length; i++
+                for(int k = 1; k < gameArray.length; k++){
+                    for(int i = 0; i < gameArray.length - k; i++){
+                        for(int j = 0; j < gameArray.length; j++){
+                            if(gameArray[j][i + 1] == 0)
+                                continue;
+                            if(gameArray[j][i + 1] == gameArray[j][i]){
+                                somethingMoved = true;
+                                gameArray[j][i] = gameArray[j][i] * 2;
+                                gameArray[j][i + 1] = 0;
+                                continue;
+                            }
+                            if(gameArray[j][i] == 0 && gameArray[j][i + 1] != 0){
+                                somethingMoved = true;
+                                gameArray[j][i] = gameArray[j][i + 1];
+                                gameArray[j][i + 1] = 0;
+                                continue;
+                            }
+                        }
+                    }
+                }
                 break;
             case "right":
+
                 break;
         }
         for(int j = 0; j < gameArray.length; j++){
