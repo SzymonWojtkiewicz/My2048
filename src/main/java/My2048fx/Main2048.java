@@ -1,6 +1,7 @@
 package My2048fx;
 
 import javafx.application.Application;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class Main2048 extends Application {
@@ -21,10 +22,15 @@ public class Main2048 extends Application {
         newGame.move("right");
 
         launch();
+        Label pagenumber = new Label();
+        pagenumber.setText("" +newGame.gameArray[0][0]);
+
     }
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("2048");
+
+
         stage.show();
 
     }
