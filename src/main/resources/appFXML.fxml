@@ -9,8 +9,7 @@
 
 <!-- fx:controller="AppFXML"-->
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="473.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="473.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="My2048fx.mainWindowController">
    <children>
       <GridPane layoutX="14.0" layoutY="59.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="59.0">
         <columnConstraints>
@@ -24,18 +23,18 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Label" />
-            <Label text="Label" GridPane.columnIndex="1" />
-            <Label text="Label" GridPane.columnIndex="2" />
-            <Label text="Label" GridPane.rowIndex="1" />
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label text="Label" GridPane.rowIndex="2" />
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="field00Label" text="Label" />
+            <Label fx:id="field10Label" text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="field20Label" text="Label" GridPane.columnIndex="2" />
+            <Label fx:id="field01Label" text="Label" GridPane.rowIndex="1" />
+            <Label fx:id="field11Label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="field21Label" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="field02Label" text="Label" GridPane.rowIndex="2" />
+            <Label fx:id="field12Label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="field22Label" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <Button layoutX="211.0" layoutY="478.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="14.0" />
-      <Label layoutX="223.0" layoutY="14.0" text="Label" AnchorPane.topAnchor="14.0" />
+      <Button fx:id="newGameButton" layoutX="199.0" layoutY="478.0" mnemonicParsing="false" text="New Game" AnchorPane.bottomAnchor="14.0" />
+      <Label fx:id="scoreLabel" layoutX="213.0" layoutY="14.0" text="MY 2048" AnchorPane.topAnchor="14.0" />
    </children>
 </AnchorPane>
