@@ -9,6 +9,8 @@ public class Game {
     public final int[][] gameArray = new int[][]{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
 
     public Game() {
+        this.addNumber();
+        this.addNumber();
     }
     public boolean addNumber() {
         int quantityOfZeros = 0;
@@ -174,6 +176,7 @@ public class Game {
         else
             return false;
     }
+
 
 
 }

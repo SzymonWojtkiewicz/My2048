@@ -10,7 +10,11 @@ import javafx.stage.Stage;
 
 public class Main2048 extends Application {
     public static void main(String[] args) {
-        Game newGame = new Game();
+//        Game newGame = new Game();
+//        newGame.move("up");
+//        newGame.move("down");
+//        newGame.move("left");
+//        newGame.move("right");
 
         launch();
         //Label pageNumber = new Label();
