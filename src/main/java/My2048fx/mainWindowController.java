@@ -78,7 +78,6 @@ public class mainWindowController {
         display(newGame.gameArray);
 
         mainAnchorPane.addEventFilter(KeyEvent.KEY_PRESSED, KeyEvent ->{
-            System.out.println("event regester " + KeyEvent.getCode());
 
             switch (KeyEvent.getCode()){
                 case UP:
@@ -107,24 +106,47 @@ public class mainWindowController {
 
     private void display(int[][] gameArray){
         field00Label.setText(Integer.toString(gameArray[0][0]));
+        field00Label.setStyle("-fx-background-color: " + setColor(gameArray[0][0]));
         field10Label.setText(Integer.toString(gameArray[0][1]));
+        field10Label.setStyle("-fx-background-color: " + setColor(gameArray[0][1]));
         field20Label.setText(Integer.toString(gameArray[0][2]));
+        field20Label.setStyle("-fx-background-color: " + setColor(gameArray[0][2]));
         field30Label.setText(Integer.toString(gameArray[0][3]));
+        field30Label.setStyle("-fx-background-color: " + setColor(gameArray[0][3]));
 
         field01Label.setText(Integer.toString(gameArray[1][0]));
+        field01Label.setStyle("-fx-background-color: " + setColor(gameArray[1][0]));
         field11Label.setText(Integer.toString(gameArray[1][1]));
+        field11Label.setStyle("-fx-background-color: " + setColor(gameArray[1][1]));
         field21Label.setText(Integer.toString(gameArray[1][2]));
+        field21Label.setStyle("-fx-background-color: " + setColor(gameArray[1][2]));
         field31Label.setText(Integer.toString(gameArray[1][3]));
+        field31Label.setStyle("-fx-background-color: " + setColor(gameArray[1][3]));
 
         field02Label.setText(Integer.toString(gameArray[2][0]));
+        field02Label.setStyle("-fx-background-color: " + setColor(gameArray[2][0]));
         field12Label.setText(Integer.toString(gameArray[2][1]));
+        field12Label.setStyle("-fx-background-color: " + setColor(gameArray[2][1]));
         field22Label.setText(Integer.toString(gameArray[2][2]));
+        field22Label.setStyle("-fx-background-color: " + setColor(gameArray[2][2]));
         field32Label.setText(Integer.toString(gameArray[2][3]));
+        field32Label.setStyle("-fx-background-color: " + setColor(gameArray[2][3]));
 
         field03Label.setText(Integer.toString(gameArray[3][0]));
+        field03Label.setStyle("-fx-background-color: " + setColor(gameArray[3][0]));
         field13Label.setText(Integer.toString(gameArray[3][1]));
+        field13Label.setStyle("-fx-background-color: " + setColor(gameArray[3][1]));
         field23Label.setText(Integer.toString(gameArray[3][2]));
+        field23Label.setStyle("-fx-background-color: " + setColor(gameArray[3][2]));
         field33Label.setText(Integer.toString(gameArray[3][3]));
+        field33Label.setStyle("-fx-background-color: " + setColor(gameArray[3][3]));
+    }
+
+
+
+    private String setColor(int value){
+        MapOfColor newMap = new MapOfColor();
+        return newMap.colorMap.get(value);
     }
 
 }
