@@ -77,6 +77,11 @@ public class mainWindowController {
         Game newGame = new Game();
         display(newGame.gameArray);
 
+        newGameButton.setOnAction(event -> {
+            newGame.restart();
+            display(newGame.gameArray);
+        });
+
         mainAnchorPane.addEventFilter(KeyEvent.KEY_PRESSED, KeyEvent ->{
 
             switch (KeyEvent.getCode()){
