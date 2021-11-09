@@ -8,6 +8,8 @@ import java.util.Random;
 public class Game {
     public  int[][] gameArray = new int[][]{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
 
+    private int score = 0;
+
     public Game() {
         this.addNumber();
         this.addNumber();
@@ -80,6 +82,195 @@ public class Game {
                 down
          */
         switch (direction){
+            case "up":
+                for(int k = 1; k < gameArray.length; k++) {
+                    for (int j = 1; j < gameArray.length; j++) {
+                        for (int i = 0; i < gameArray.length; i++) {
+                            if (gameArray[j][i] == 0)
+                                continue;
+                            if (gameArray[j][i] != 0 && gameArray[j - 1][i] == 0) {
+                                gameArray[j - 1][i] = gameArray[j][i];
+                                gameArray[j][i] = 0;
+                                somethingMoved = true;
+                            }
+                        }
+                    }
+                }
+                for (int j = 1; j < gameArray.length; j++) {
+                    for (int i = 0; i < gameArray.length; i++) {
+                        if (gameArray[j][i] == 0)
+                            continue;
+                        if (gameArray[j][i] != 0 && gameArray[j - 1][i] == gameArray[j][i]) {
+                            gameArray[j - 1][i] = gameArray[j - 1][i] + gameArray[j][i];
+                            gameArray[j][i] = 0;
+                            score = score + gameArray[j - 1][i];
+                            somethingMoved = true;
+                        }
+                    }
+                }
+                for(int k = 1; k < gameArray.length; k++) {
+                    for (int j = 1; j < gameArray.length; j++) {
+                        for (int i = 0; i < gameArray.length; i++) {
+                            if (gameArray[j][i] == 0)
+                                continue;
+                            if (gameArray[j][i] != 0 && gameArray[j - 1][i] == 0) {
+                                gameArray[j - 1][i] = gameArray[j][i];
+                                gameArray[j][i] = 0;
+                                somethingMoved = true;
+                            }
+                        }
+                    }
+                }
+                break;
+            case "down":
+                for(int k = 1; k < gameArray.length; k++) {
+                    for (int j = gameArray.length - 2; j > -1; j--) {
+                        for (int i = 0; i < gameArray.length; i++) {
+                            if (gameArray[j][i] == 0)
+                                continue;
+                            if (gameArray[j][i] != 0 && gameArray[j + 1][i] == 0) {
+                                gameArray[j + 1][i] = gameArray[j][i];
+                                gameArray[j][i] = 0;
+                                somethingMoved = true;
+                            }
+                        }
+                    }
+                }
+                for (int j = gameArray.length - 2; j > -1; j--) {
+                    for (int i = 0; i < gameArray.length; i++) {
+                        if (gameArray[j][i] == 0)
+                            continue;
+                        if (gameArray[j][i] != 0 && gameArray[j + 1][i] == gameArray[j][i]) {
+                            gameArray[j + 1][i] = gameArray[j + 1][i] + gameArray[j][i];
+                            gameArray[j][i] = 0;
+                            score = score + gameArray[j + 1][i];
+                            somethingMoved = true;
+                        }
+                    }
+                }
+                for(int k = 1; k < gameArray.length; k++) {
+                    for (int j = gameArray.length - 2; j > -1; j--) {
+                        for (int i = 0; i < gameArray.length; i++) {
+                            if (gameArray[j][i] == 0)
+                                continue;
+                            if (gameArray[j][i] != 0 && gameArray[j + 1][i] == 0) {
+                                gameArray[j + 1][i] = gameArray[j][i];
+                                gameArray[j][i] = 0;
+                                somethingMoved = true;
+                            }
+                        }
+                    }
+                }
+
+                break;
+            case "left":
+                for(int k = 1; k < gameArray.length; k++) {
+                    for (int i = 1; i < gameArray.length; i++) {
+                        for (int j = 0; j < gameArray.length; j++) {
+                            if (gameArray[j][i] == 0)
+                                continue;
+                            if (gameArray[j][i] != 0 && gameArray[j][i - 1] == 0) {
+                                gameArray[j][i - 1] = gameArray[j][i];
+                                gameArray[j][i] = 0;
+                                somethingMoved = true;
+                            }
+                        }
+                    }
+                }
+                for (int i = 1; i < gameArray.length; i++) {
+                    for (int j = 0; j < gameArray.length; j++) {
+                        if (gameArray[j][i] == 0)
+                            continue;
+                        if (gameArray[j][i] != 0 && gameArray[j][i - 1] == gameArray[j][i]) {
+                            gameArray[j][i - 1] = gameArray[j][i - 1] + gameArray[j][i];
+                            gameArray[j][i] = 0;
+                            score = score + gameArray[j][i - 1];
+                            somethingMoved = true;
+                        }
+                    }
+                }
+                for(int k = 1; k < gameArray.length; k++) {
+                    for (int i = 1; i < gameArray.length; i++) {
+                        for (int j = 0; j < gameArray.length; j++) {
+                            if (gameArray[j][i] == 0)
+                                continue;
+                            if (gameArray[j][i] != 0 && gameArray[j][i - 1] == 0) {
+                                gameArray[j][i - 1] = gameArray[j][i];
+                                gameArray[j][i] = 0;
+                                somethingMoved = true;
+                            }
+                        }
+                    }
+                }
+                break;
+            case "right":
+                for(int k = 1; k < gameArray.length; k++) {
+                    for (int i = gameArray.length - 2; i > -1; i--) {
+                        for (int j = 0; j < gameArray.length; j++) {
+                            if (gameArray[j][i] == 0)
+                                continue;
+                            if (gameArray[j][i] != 0 && gameArray[j][i + 1] == 0) {
+                                gameArray[j][i + 1] = gameArray[j][i];
+                                gameArray[j][i] = 0;
+                                somethingMoved = true;
+                            }
+                        }
+                    }
+                }
+                for (int i = gameArray.length - 2; i > -1; i--) {
+                    for (int j = 0; j < gameArray.length; j++) {
+                        if (gameArray[j][i] == 0)
+                            continue;
+                        if (gameArray[j][i] != 0 && gameArray[j][i + 1] == gameArray[j][i]) {
+                            gameArray[j][i + 1] = gameArray[j][i + 1] + gameArray[j][i];
+                            gameArray[j][i] = 0;
+                            score = score + gameArray[j][i + 1];
+                            somethingMoved = true;
+                        }
+                    }
+                }
+                for(int k = 1; k < gameArray.length; k++) {
+                    for (int i = gameArray.length - 2; i > -1; i--) {
+                        for (int j = 0; j < gameArray.length; j++) {
+                            if (gameArray[j][i] == 0)
+                                continue;
+                            if (gameArray[j][i] != 0 && gameArray[j][i + 1] == 0) {
+                                gameArray[j][i + 1] = gameArray[j][i];
+                                gameArray[j][i] = 0;
+                                somethingMoved = true;
+                            }
+                        }
+                    }
+                }
+                break;
+        }
+        if(somethingMoved)
+            return true;
+        else
+            return false;
+    }
+    public void restart(){
+       /* for (int[] u: gameArray) {
+            for (int elem: u) {
+                elem = 0;// Your individual element
+            }
+        }*/
+        for(int j = 0; j < gameArray.length; j++){
+            for (int i = 0; i < gameArray[j].length; i++){
+                gameArray[j][i] = 0;
+            }
+        }
+
+            addNumber();
+            addNumber();
+
+    }
+
+
+
+}
+
+/*  switch (direction){
             case "up":
                 for(int k = 1; k < gameArray.length; k++){
                     for(int j = 0; j < gameArray.length - k; j++){
@@ -170,29 +361,4 @@ public class Game {
                     }
                 }
                 break;
-        }
-        if(somethingMoved)
-            return true;
-        else
-            return false;
-    }
-    public void restart(){
-       /* for (int[] u: gameArray) {
-            for (int elem: u) {
-                elem = 0;// Your individual element
-            }
         }*/
-        for(int j = 0; j < gameArray.length; j++){
-            for (int i = 0; i < gameArray[j].length; i++){
-                gameArray[j][i] = 0;
-            }
-        }
-
-            addNumber();
-            addNumber();
-
-    }
-
-
-
-}
