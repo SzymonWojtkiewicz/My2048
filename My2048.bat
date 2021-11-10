@@ -1,1 +1,0 @@
-java -jar My2048.jar
