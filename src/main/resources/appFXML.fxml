@@ -10,7 +10,7 @@
 
 <!-- fx:controller="AppFXML"-->
 
-<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="473.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="My2048fx.mainWindowController">
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="473.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="My2048fx.mainWindowController">
    <children>
       <GridPane fx:id="mainGrid" alignment="CENTER" gridLinesVisible="true" layoutX="14.0" layoutY="59.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="59.0">
         <columnConstraints>
@@ -26,74 +26,74 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="field10Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1">
+            <Label fx:id="field10Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="1">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font></Label>
-            <Label fx:id="field20Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2">
+            <Label fx:id="field20Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="2">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font></Label>
-            <Label fx:id="field01Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="1">
+            <Label fx:id="field01Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.rowIndex="1">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font></Label>
-            <Label fx:id="field11Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label fx:id="field11Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font></Label>
-            <Label fx:id="field21Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="field21Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font></Label>
-            <Label fx:id="field02Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="2">
+            <Label fx:id="field02Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.rowIndex="2">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font></Label>
-            <Label fx:id="field12Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Label fx:id="field12Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font></Label>
-            <Label fx:id="field22Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label fx:id="field22Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font></Label>
-            <Label fx:id="field30Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="3">
+            <Label fx:id="field30Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="3">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font>
             </Label>
-            <Label fx:id="field31Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Label fx:id="field31Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font>
             </Label>
-            <Label fx:id="field32Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Label fx:id="field32Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font>
             </Label>
-            <Label fx:id="field03Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.rowIndex="3">
+            <Label fx:id="field03Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.rowIndex="3">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font>
             </Label>
-            <Label fx:id="field13Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label fx:id="field13Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font>
             </Label>
-            <Label fx:id="field23Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Label fx:id="field23Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font>
             </Label>
-            <Label fx:id="field33Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Label fx:id="field33Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font>
             </Label>
-            <Label fx:id="field00Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label">
+            <Label fx:id="field00Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0">
                <font>
                   <Font name="Berlin Sans FB" size="44.0" />
                </font>
@@ -101,6 +101,9 @@
          </children>
       </GridPane>
       <Button fx:id="newGameButton" layoutX="199.0" layoutY="478.0" mnemonicParsing="false" text="New Game" AnchorPane.bottomAnchor="14.0" />
-      <Label fx:id="scoreLabel" layoutX="213.0" layoutY="14.0" text="MY 2048" AnchorPane.topAnchor="14.0" />
+      <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="14.0" text="MY 2048" textAlignment="CENTER" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Berlin Sans FB" size="32.0" />
+         </font></Label>
    </children>
 </AnchorPane>

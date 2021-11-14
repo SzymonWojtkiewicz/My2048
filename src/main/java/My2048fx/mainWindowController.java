@@ -1,12 +1,16 @@
 package My2048fx;
 
 
+
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+
+
 
 public class mainWindowController {
 
@@ -74,11 +78,12 @@ public class mainWindowController {
 
     public void initialize(){
         Game newGame = new Game();
-        display(newGame.gameArray);
+        display(newGame.getGameArray());
 
         newGameButton.setOnAction(event -> {
             newGame.restart();
-            display(newGame.gameArray);
+            display(newGame.getGameArray());
+            scoreLabel.setText("MY 2048");
         });
 
         mainAnchorPane.addEventFilter(KeyEvent.KEY_PRESSED, KeyEvent ->{
@@ -87,26 +92,32 @@ public class mainWindowController {
                 case UP:
                     if(newGame.move("up"))
                         newGame.addNumber();
-                    display(newGame.gameArray);
+                    display(newGame.getGameArray());
+                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
                     break;
                 case DOWN:
                     if(newGame.move("down"))
                         newGame.addNumber();
-                    display(newGame.gameArray);
+                    display(newGame.getGameArray());
+                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
                     break;
                 case LEFT:
                     if(newGame.move("left"))
                         newGame.addNumber();
-                    display(newGame.gameArray);
+                    display(newGame.getGameArray());
+                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
                     break;
                 case RIGHT:
                     if(newGame.move("right"))
                         newGame.addNumber();
-                    display(newGame.gameArray);
+                    display(newGame.getGameArray());
+                    scoreLabel.setText((Integer.toString((newGame.getScore()))));
                     break;
             }
         });
+
     }
+
 
     private void display(int[][] gameArray){
         field00Label.setText(Integer.toString(gameArray[0][0]));
@@ -144,6 +155,8 @@ public class mainWindowController {
         field23Label.setStyle("-fx-background-color: " + setColor(gameArray[3][2]));
         field33Label.setText(Integer.toString(gameArray[3][3]));
         field33Label.setStyle("-fx-background-color: " + setColor(gameArray[3][3]));
+
+
     }
 
 

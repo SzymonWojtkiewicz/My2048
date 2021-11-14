@@ -6,7 +6,7 @@ package My2048fx;//
 import java.util.Random;
 
 public class Game {
-    public  int[][] gameArray = new int[][]{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
+    private  int[][] gameArray = new int[][]{{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
 
     private int score = 0;
 
@@ -250,20 +250,21 @@ public class Game {
             return false;
     }
     public void restart(){
-       /* for (int[] u: gameArray) {
-            for (int elem: u) {
-                elem = 0;// Your individual element
-            }
-        }*/
         for(int j = 0; j < gameArray.length; j++){
             for (int i = 0; i < gameArray[j].length; i++){
                 gameArray[j][i] = 0;
             }
         }
+        score = 0;
+        addNumber();
+        addNumber();
 
-            addNumber();
-            addNumber();
-
+    }
+    public int getScore(){
+        return score;
+    }
+    public int[][] getGameArray(){
+        return  gameArray;
     }
 
 

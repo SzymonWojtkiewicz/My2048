@@ -10,7 +10,7 @@
 
 <!-- fx:controller="AppFXML"-->
 
-<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="473.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="My2048fx.mainWindowController">
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="473.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="My2048fx.mainWindowController">
    <children>
       <GridPane fx:id="mainGrid" alignment="CENTER" gridLinesVisible="true" layoutX="14.0" layoutY="59.0" prefHeight="400.0" prefWidth="400.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="59.0">
         <columnConstraints>
@@ -101,6 +101,9 @@
          </children>
       </GridPane>
       <Button fx:id="newGameButton" layoutX="199.0" layoutY="478.0" mnemonicParsing="false" text="New Game" AnchorPane.bottomAnchor="14.0" />
-      <Label fx:id="scoreLabel" layoutX="213.0" layoutY="14.0" text="MY 2048" AnchorPane.topAnchor="14.0" />
+      <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="14.0" text="MY 2048" textAlignment="CENTER" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Berlin Sans FB" size="32.0" />
+         </font></Label>
    </children>
 </AnchorPane>
